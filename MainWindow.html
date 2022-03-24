@@ -51,9 +51,9 @@
       <h1>Course Report</h1>
       <form id="form1" name="form1" method="post"  action="<?php echo $PHP_SELF; ?>" style="color: #864c7f; font-size: 20px;">
          <?  
-            mysql_connect ("mo.its.rmit.edu.au","s3829402","pwd");  
-            mysql_select_db ("s3829402");  
-            $select="s3829402";  
+            mysql_connect ("test","UserDataDb","test");  
+            mysql_select_db ("UserDataDb");  
+            $select="UserDataDb";  
             if (isset ($select)&&$select!=""){  
             $select=$_POST ['NEW'];  
             }  
@@ -128,7 +128,7 @@
             </thead>
             <tbody>
                <?php
-                  $db_server = "mo.its.rmit.edu.au";
+                  $db_server = "test";
                   $db_username = "test";
                   $db_password = "test";
                   $db_database = "UserDataDb";
