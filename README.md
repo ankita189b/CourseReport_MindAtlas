@@ -5,7 +5,7 @@ It will fetch Report from the selected filters and display the data accordingly.
 
 # Pre-requisites
 
-SQL Database.
+SQL Database,
 PHP
 
 # Steps to Run
