@@ -13,7 +13,6 @@ EnrollmentID INTEGER PRIMARY KEY AUTO_INCREMENT,
 UserID INTEGER, FOREIGN KEY (UserID) REFERENCES Users (UserID),
 CourseID INTEGER, FOREIGN KEY (CourseID) REFERENCES Courses (CourseID),
 CompletionStatus VARCHAR(15) NOT NULL
--- , CHECK (CompletionStatus = 'not started' OR CompletionStatus = 'in progress' OR CompletionStatus = 'completed')
 );
 
 -- DML test data
@@ -60,4 +59,5 @@ INSERT INTO Enrollments (UserID, CourseID, CompletionStatus) VALUES (8, 9, 'in p
 INSERT INTO Enrollments (UserID, CourseID, CompletionStatus) VALUES (9, 3, 'not started');
 INSERT INTO Enrollments (UserID, CourseID, CompletionStatus) VALUES (2, 2, 'not started');
 
-SELECT Users.FirstName, Users.Surname, Courses.Description, Enrollments.CompletionStatus FROM Users, Courses, Enrollments WHERE Enrollments.UserID = Users.UserID AND Enrollments.CourseID = Courses.CourseID;
+SELECT Users.FirstName, Users.Surname, Courses.Description, Enrollments.CompletionStatus
+FROM Users, Courses, Enrollments WHERE Enrollments.UserID = Users.UserID AND Enrollments.CourseID = Courses.CourseID;
