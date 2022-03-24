@@ -11,4 +11,5 @@ PHP
 # Steps to Run
 
 1. Run the dbCreationScript.sql file. It will create tables with test data in the database.
-2. Load the HTML file in any compatible browser. The Data would be displayed.
+2. Change database connection details at two places in php file at lines 55, 56, 57, 137, 138, 139, and 140.
+3. Load the php file in any compatible browser. The Data would be displayed.
